@@ -1,11 +1,16 @@
 #load functions
+#trivial change to test the build
+
+
+
 Get-ChildItem -Path $PSScriptRoot\functions\*.ps1 |
 ForEach-Object {
     . $_.fullname
 }
 
 #configure TLS settings for GitHub
-[Net.ServicePointManager]::SecurityProtocol = [Net.SecurityProtocolType]::Tls12
+[Net.ServicePointManager]::SecurityProtocol = [Net.SecurityProtoco
+lType]::Tls12
 
 #cache issue labels
 $global:PSIssueLabel = Get-PSIssueLabel
